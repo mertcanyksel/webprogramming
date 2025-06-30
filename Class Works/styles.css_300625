@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       
+        <title>Home Page</title>
+        
+        <meta name="viewport" content="width=devive-width,initial-scale=1">
+        <meta charset="utf-8">
+    
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="images.jfif">  <!--16062025 -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">   <!-- 30 06 2025 -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+        <!-- Google fonts then we cohose one of the mand click code and it shows how you can use it -->
+        <!--  font awesome cdn link one of the top and click the code section 
+        needs to be inside of the head-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    </head>
+    <body>
+         <header class = "header">                      <!--16062025 -->
+            <a href="/ "> 
+                <img src="logo1.png" class="logo">    <!--16062025 -->
+            </a>
+
+            <form id="search-form">
+                <input type="search" name="query" placeholder="search for a product">  <!--16062025 -->
+                <button type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            
+            <nav class="right-nav">    <!--30 06 2025-->
+                       
+                <a href="account.html">
+                    <i class="fa-solid fa-user-tie"></i>
+                </a>
+        <!--If we don`t use like above we cannot click the links -->
+
+            <!-- <a href="wishlist.html">Whislist</a> --->
+                <i class="fa-solid fa-heart"></i>     <!-- https://fontawesome.com/icons/heart?f=classic&s=solid then we just copied the link from that website -->
+
+           <!-- <a href="cart.html">Cart</a>   -->
+                <i class="fa-solid fa-cart-plus"></i>
+            </nav>
+
+
+            <nav class="product-nav">
+                <a href="mens.html">Men</a>
+                <a href="women.html">Women</a>
+                <a href="kids.html">Kids</a>
+                <a href="accessories.html">Accessories</a>
+            </nav>
+
+
+        </header>
+        <div class="home-banner">
+            <div class="banner-text">
+                <h2>SALE</h2>
+                <P>Get massive discounts in our mid-year sale</P>
+                <a href="sale.html">Shop</a>
+            </div>
+        </div>
+       
+    </body>
+
+</html>
