@@ -1,72 +1,134 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-       
-        <title>Home Page</title>
-        
-        <meta name="viewport" content="width=devive-width,initial-scale=1">
-        <meta charset="utf-8">
-    
-        <link rel="stylesheet" href="styles.css">
-        <link rel="icon" href="images.jfif">  <!--16062025 -->
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">   <!-- 30 06 2025 -->
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
-        <!-- Google fonts then we cohose one of the mand click code and it shows how you can use it -->
-        <!--  font awesome cdn link one of the top and click the code section 
-        needs to be inside of the head-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+:root {
+    --dark-purple: hsla(329, 40%, 12%, 1);
+    --english-violet: hsla(284, 15%, 35%, 1);
+    --cool-gray: hsla(228, 21%, 72%, 1);
+    --cool-gray-2: hsla(216, 20%, 61%, 1);
+    --paynes-gray: hsla(213, 17%, 41%, 1);
+    --translucent-dark:hsla(0, 0%, 20%, 0.6);
+}
 
 
 
-    </head>
-    <body>
-         <header class = "header">                      <!--16062025 -->
-            <a href="/ "> 
-                <img src="logo1.png" class="logo">    <!--16062025 -->
-            </a>
-
-            <form id="search-form">
-                <input type="search" name="query" placeholder="search for a product">  <!--16062025 -->
-                <button type="submit">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </form>
-            
-            <nav class="right-nav">    <!--30 06 2025-->
-                       
-                <a href="account.html">
-                    <i class="fa-solid fa-user-tie"></i>
-                </a>
-        <!--If we don`t use like above we cannot click the links -->
-
-            <!-- <a href="wishlist.html">Whislist</a> --->
-                <i class="fa-solid fa-heart"></i>     <!-- https://fontawesome.com/icons/heart?f=classic&s=solid then we just copied the link from that website -->
-
-           <!-- <a href="cart.html">Cart</a>   -->
-                <i class="fa-solid fa-cart-plus"></i>
-            </nav>
+body {
+    background-color:white;
+    margin: 0px; /*It helps to remove the extra space with top of the head  160625 */
+}
 
 
-            <nav class="product-nav">
-                <a href="mens.html">Men</a>
-                <a href="women.html">Women</a>
-                <a href="kids.html">Kids</a>
-                <a href="accessories.html">Accessories</a>
-            </nav>
 
 
-        </header>
-        <div class="home-banner">
-            <div class="banner-text">
-                <h2>SALE</h2>
-                <P>Get massive discounts in our mid-year sale</P>
-                <a href="sale.html">Shop</a>
-            </div>
-        </div>
-       
-    </body>
+.header {   /*160625 */
+    background-color: var(--english-violet);
+    display: flex;   /*30 06 2025*/    /*CSS Flexbox Layout Guide*/
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: center;
+}
 
-</html>
+.logo { /*160625 */
+
+    width: 100px;
+}
+
+.right-nav a{
+    color: var(--dark-purple);
+    font-family: "Press Start 2P", system-ui;
+    font-size: 1.2em;
+    text-decoration: none;  /*If we don`t use text decoration it`s gonna be under line below the icon so we need to write that line */
+}
+
+
+.right-nav a:hover {
+    color: var(--dark-purple);
+}
+
+
+
+.right-nav {
+    display: flex;
+    flex-direction: row; /* We put the same positions them*/
+    margin-right: 30px; /* There are 30px space from the right side of the icons*/
+    gap: 20px;   /* There are 20 px space between the icons now */
+}
+
+
+#search-form {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    max-width: 800px;
+}
+
+
+#search-form input {
+    padding: 0.6em;
+    border: 2px solid transparent;
+    border-radius: 10px 0px 0px 10px;
+    flex: 1;
+
+}
+
+
+#search-form button {
+    padding: 0.6em;
+    border: 2px solid transparent;
+    border-radius: 0px 10px 10px 0px;
+    background-color: var(--cool-gray-2);
+    color: var(--dark-purple);
+}
+
+
+.product-nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 100%;
+    justify-content: center;   /* We put the product nav on the middle*/
+
+
+}
+
+
+.product-nav a {
+    color: var(--dark-purple);
+    font-family: "Press Start 2P", system-ui;
+    font-size: 1.2em;
+    text-decoration: none;  /*If we don`t use text decoration it`s gonna be under line below the icon so we need to write that line */
+    padding: 1em;
+}
+
+
+.home-banner {
+    background-color: var(--dark-purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background-image: url(wolf.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.banner-text {
+    background-color: var(--translucent-dark);
+    padding: 1em;
+    color: var(--dark-purple);
+    text-align: center;
+}
+
+
+.banner-text h2 {
+    font-size: 4em;
+}
+
+.banner-text a{
+    background-color: var(--cool-gray);
+    color: var(--cool-gray-2);
+    text-decoration: none;
+    font-size: 1.5em;
+    display: block;
+    padding: 0.5em;
+    text-align: center;
+}
