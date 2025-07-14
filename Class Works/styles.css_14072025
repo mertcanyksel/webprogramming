@@ -1,0 +1,233 @@
+:root {
+    --dark-purple: hsla(329, 40%, 12%, 1);
+    --english-violet: hsla(284, 15%, 35%, 1);
+    --cool-gray: hsla(228, 21%, 72%, 1);
+    --cool-gray-2: hsla(216, 20%, 61%, 1);
+    --paynes-gray: hsla(213, 17%, 41%, 1);
+    --translucent-dark:hsla(0, 0%, 20%, 0.6);
+}
+
+
+
+body {
+    background-color:white;
+    margin: 0px; /*It helps to remove the extra space with top of the head  160625 */
+}
+
+
+
+
+.header {   /*160625 */
+    background-color: var(--english-violet);
+    display: flex;   /*30 06 2025*/    /*CSS Flexbox Layout Guide*/
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { /*160625 */
+
+    width: 100px;
+}
+
+.right-nav a{
+    color: var(--dark-purple);
+    font-family: "Press Start 2P", system-ui;
+    font-size: 1.2em;
+    text-decoration: none;  /*If we don`t use text decoration it`s gonna be under line below the icon so we need to write that line */
+    padding: 0.5em;
+}
+
+
+.right-nav a:hover {
+    color: var(--dark-purple);
+}
+
+
+
+.right-nav {
+    display: flex;
+    flex-direction: row; /* We put the same positions them*/
+    margin-right: 30px; /* There are 30px space from the right side of the icons*/
+    /*gap: 20px;    There are 20 px space between the icons now */ 
+    margin-right: 30px;
+    margin-left: auto;
+    gap: 30px;
+}
+
+
+#search-form {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    max-width: 800px;
+   
+}
+
+
+#search-form input {
+    padding: 0.6em;
+    border: 2px solid transparent;
+    border-radius: 10px 0px 0px 10px;
+    flex: 1;
+
+}
+
+
+#search-form button {
+    padding: 0.6em;
+    border: 2px solid transparent;
+    border-radius: 0px 10px 10px 0px;
+    background-color: var(--cool-gray-2);
+    color: var(--dark-purple);
+}
+
+
+.product-nav{
+    display: flex;
+    /*flex-direction: row;*/
+    flex-direction: column;  /*07 07 2025 vertical menu for mobile*/
+    flex-wrap: wrap;
+    min-width: 100%;
+    justify-content: center;   /* We put the product nav on the middle*/
+    max-height: 0px;
+    overflow: hidden;
+
+}
+
+.product-nav.open {
+    max-height: 50vh;
+}
+
+
+
+.product-nav a {
+    color: var(--dark-purple);
+    font-family: "Press Start 2P", system-ui;
+    font-size: 1.2em;
+    text-decoration: none;  /*If we don`t use text decoration it`s gonna be under line below the icon so we need to write that line */
+    padding: 1em;
+}
+
+
+.home-banner {
+    background-color: var(--dark-purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background-image: url(wolf.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.banner-text {
+    background-color: var(--translucent-dark);
+    padding: 0.5em;
+    color: var(--dark-purple);
+    text-align: center;
+}
+
+.banner-text p {
+    white-space: wrap;
+}
+
+.banner-text h2 {
+    font-size: 4em;
+}
+
+.banner-text a{
+    background-color: var(--cool-gray);
+    color: var(--cool-gray-2);
+    text-decoration: none;
+    font-size: 1.5em;
+    display: block;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: 1px solid transparent;
+    font-size: 2em;
+    color: var(--cool-gray-2);
+}
+
+
+/* Card */
+.card img {
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.price::before{     /* 14 07 2025*/
+    content: "$";
+
+}
+
+.card-content {
+    padding: 5em;
+}
+
+.card-button {
+    background-color: var(--cool-gray);
+    color: var(--dark-purple);
+    padding: 0.5em;
+    text-decoration: none;
+    display: block;
+    min-width: 100%;
+    text-align: center;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /*It makes 3 of images together makes group kind of*/
+    gap: 20px;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 2em;        /*14 07 2025 WE PUT SOME SPACE ON MOBILE SIDE IN THE CONTAINER AS A TOP AND BOTTOM */
+    margin-bottom: 2em;
+}
+
+
+.bottom-banner {
+    grid-column: span 2;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-purple);
+    display: flex;
+    padding: 1em;
+    background-image: linear-gradient(45deg,var(--english-violet),var(--paynes-gray));
+}
+
+.footer-nav{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-nav a {
+    padding: 1em;
+    text-decoration: none;
+    color: var(--dark-purple);
+}
+
+.main-footer{
+    background-color: var(--translucent-dark);
+}
+
+.social-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.social-nav a {
+    padding: 0.5em;
+    font-size: 1.5em;
+    color: var(--dark-purple);
+    text-decoration: none;
+}
